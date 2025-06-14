@@ -1,0 +1,5 @@
+run = """
+pip install markdown &&
+python home-office-site/scripts/publish_articles.py &&
+python home-office-site/scripts/generate_status.py
+"""

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Home Office Site Dashboard</title></head>
+<body>
+  <h1>🏠 Home Office Site - Real-time Status 📈</h1>
+  <div id="status"></div>
+  <script>
+    async function updateStatus() {
+      const res = await fetch('status.json');
+      const data = await res.json();
+      document.getElementById('status').innerHTML = `
+        <p>Articles Published: ${data.articles_published}</p>
+        <p>Total Clicks: ${data.clicks}</p>
+        <p>Revenue Earned: $${data.revenue}</p>`;
+    }
+    updateStatus();
+    setInterval(updateStatus, 30000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+run = """
+pip install markdown &&
+python scripts/publish_articles.py &&
+python scripts/generate_status.py
+"""

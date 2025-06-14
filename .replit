@@ -1,0 +1,6 @@
+modules = ["python-3.11"]
+run = """
+pip install markdown requests &&
+python scripts/publish_articles.py &&
+python scripts/generate_status.py
+"""
